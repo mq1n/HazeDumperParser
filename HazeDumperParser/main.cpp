@@ -75,7 +75,6 @@ auto ReadUrl(const std::string & szAddress, std::string * pszResult, std::size_t
 		return false;
 	}
 
-	std::size_t uiOldSize = 0;
 	while (dwBytesRead) {
 		if (InternetReadFile(hFile, szTempBuffer, 4096, &dwBytesRead))
 			std::copy(&szTempBuffer[0], &szTempBuffer[dwBytesRead], std::back_inserter(vTempdata));
